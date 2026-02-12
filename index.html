@@ -208,6 +208,17 @@
             line-height: 1.4;
         }
 
+        /* NEW: Improved Publication Links */
+        .pub-title a {
+            color: inherit;
+            text-decoration: none;
+            transition: color 0.2s ease;
+        }
+
+        .pub-title a:hover {
+            color: var(--primary-color);
+        }
+
         .pub-authors {
             font-size: 0.95rem;
             margin-bottom: 4px;
@@ -299,10 +310,6 @@
                 I am a PhD candidate at <strong>Tel Aviv University</strong>, advised by <strong>Oren Barkan</strong> and <strong>Noam Koenigstein</strong>. 
                 My research centers on <strong>Interpretable and Explainable AI</strong>, where I focus on making complex black-box models transparent, adaptive, and trustworthy.
             </p>
-            <!-- <p>
-                Recently, I was honored as a member of the <strong>Forbes 30 Under 30</strong> class of 2025. 
-                My work includes developing novel attribution methods like <em>Iterated Integrated Attributions</em> and <em>Stochastic Integrated Explanations</em>, which have been applied across vision models, recommender systems, and Large Language Models (LLMs).
-            </p> -->
             <p>
                 In parallel to my academic work, I lead a research group and have spent three years as a <strong>Computer Vision Researcher</strong> working on video analytics and classical vision.
                 My technical foundation includes three years working as a <strong>Data Engineer</strong> prior to my academic career.
@@ -315,7 +322,6 @@
             </p>
         </div>
         <div class="tags-container">
-            <!-- <span class="tag honor-badge"><i class="fas fa-star"></i> Forbes 30 Under 30 (2025)</span> -->
             <span class="tag">Explainable AI</span>
             <span class="tag">Computer Vision</span>
             <span class="tag">Interpretable AI</span>
@@ -325,10 +331,6 @@
 
     <section id="news">
         <h2>News</h2>
-        <!-- <div class="news-item">
-            <span class="news-date">Feb 2026</span> 
-            <span class="news-content">Attended and presented three papers at <strong>AAAI 2026</strong> in Singapore!</span>
-        </div> -->
         <div class="news-item">
             <span class="news-date">Nov 2025</span> 
             <span class="news-content">Three papers accepted to <strong>AAAI 2026</strong>.</span>
