@@ -3,188 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Yehonatan Elisha | AI Researcher & PhD Candidate at Tel Aviv University.">
     <title>Yehonatan Elisha | AI Researcher</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; color: #333; max-width: 950px; margin: 0 auto; padding: 40px 20px; background-color: #fff; }
-        header { border-bottom: 2px solid #f4f4f4; padding-bottom: 30px; margin-bottom: 30px; display: flex; align-items: center; }
-        .profile-pic { width: 160px; height: 160px; border-radius: 50%; margin-right: 40px; border: 4px solid #f0f0f0; object-fit: cover; }
-        h1 { margin: 0; font-size: 2.5em; color: #1a1a1a; }
-        .subtitle { font-size: 1.1em; color: #555; margin-top: 5px; font-weight: 500; }
-        .social-links { margin-top: 15px; }
-        .social-links a { margin-right: 15px; text-decoration: none; color: #007bff; font-size: 1.2em; transition: color 0.2s; }
-        .social-links a:hover { color: #0056b3; }
-        nav { margin-bottom: 40px; position: sticky; top: 0; background: white; padding: 10px 0; z-index: 100; border-bottom: 1px solid #eee; }
-        nav a { margin-right: 25px; text-decoration: none; color: #444; font-weight: 600; text-transform: uppercase; font-size: 0.9em; }
-        nav a:hover { color: #007bff; }
-        section { margin-bottom: 50px; scroll-margin-top: 80px; }
-        h2 { font-size: 1.8em; color: #222; margin-bottom: 25px; border-bottom: 1px solid #eee; padding-bottom: 10px; }
-        .news-item { margin-bottom: 12px; display: flex; gap: 15px; }
-        .news-date { font-weight: bold; color: #007bff; min-width: 90px; }
-        .pub-list { list-style: none; padding: 0; }
-        .pub-item { margin-bottom: 25px; padding-left: 0; position: relative; }
-        .pub-title { font-weight: 700; font-size: 1.05em; color: #1a1a1a; display: block; margin-bottom: 4px; }
-        .pub-authors { color: #555; font-size: 0.95em; }
-        .pub-authors strong { color: #000; text-decoration: underline; }
-        .pub-venue { font-style: italic; color: #007bff; font-weight: 500; }
-        .pub-links { margin-top: 8px; font-size: 0.9em; }
-        .pub-links a { text-decoration: none; color: #666; border: 1px solid #ddd; padding: 2px 8px; border-radius: 4px; margin-right: 5px; }
-        .pub-links a:hover { background: #f8f8f8; border-color: #bbb; }
-        footer { font-size: 0.85em; color: #888; text-align: center; margin-top: 80px; padding-top: 20px; border-top: 1px solid #eee; }
-        .tag { background: #e9ecef; padding: 3px 10px; border-radius: 15px; font-size: 0.85em; font-weight: 500; color: #495057; display: inline-block; margin-top: 10px; }
+        :root {
+            --primary-color: #2563eb; /* Modern academic blue */
+            --text-dark: #1e293b;
+            --text-medium: #475569;
+            --text-light: #64748b;
+            --bg-light: #f8fafc;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            line-height: 1.7;
+            color: var(--text-medium);
+            background-color: #fff;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Container for central alignment */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* Header / Hero Section */
+        header {
+            background: linear-gradient(to bottom, #ffffff, #f1f5f9);
+            padding: 60px 0 40px;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 40px;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-pic {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            object-fit: cover;
+            flex-shrink: 0;
+        }
+
+        .header-text h1 {
+            margin: 0;
+            font-size: 2.75rem;
+            color: var(--text-dark);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+        }
+
+        .subtitle {
+            font-size: 1.25rem;
+            color: var(--text-light);
+            margin: 8px 0 16px;
+            font-weight: 500;
+        }
+
+        /* Social Icons */
+        .social-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .social-links a {
+            color: var(--text-light);
+            font-size: 1.4rem;
+            transition: all 0.2s ease;
+        }
+
+        .social-links a:hover {
+            color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+
+        /* Navigation */
+        nav {
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(8px);
+            padding: 16px 0;
+            z-index: 100;
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
+        }
+
+        nav .container {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-medium);
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* General Section Styling */
+        section {
+            margin-bottom: 80px;
+            scroll-margin-top: 100px;
+        }
+
+        h2 {
+            font-size: 1.75rem;
+            color: var(--text-dark);
+            margin-bottom: 32px;
+            padding-bottom: 12px;
+            border-bottom: 2px solid var(--border-color);
+            font-weight: 700;
+        }
+
+        /* About Section */
+        .about-text {
+            font-size: 1.05rem;
+            color: var(--text-medium);
+        }
+        
+        strong {
+            color: var(--text-dark);
+        }
+
+        .tags-container {
+            margin-top: 24px;
+        }
+
+        .tag {
+            background: #eff6ff;
+            color: var(--primary-color);
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            display: inline-block;
+            margin: 0 8px 8px 0;
+            border: 1px solid #bfdbfe;
+        }
+
+        .honor-badge {
+            background: #fffbeb; /* Gold/Yellow tint */
+            color: #b45309;
+            border-color: #fcd34d;
+        }
+
+        /* News Timeline */
+        .news-item {
+            display: flex;
+            gap: 24px;
+            margin-bottom: 20px;
+            align-items: baseline;
+        }
+
+        .news-date {
+            font-weight: 700;
+            color: var(--text-light);
+            min-width: 100px;
+            font-feature-settings: "tnum";
+            text-align: right;
+            font-size: 0.95rem;
+        }
+
+        .news-content {
+            flex: 1;
+        }
+
+        /* Publications */
+        .pub-list {
+            display: flex;
+            flex-direction: column;
+            gap: 32px;
+        }
+
+        .pub-item {
+            position: relative;
+        }
+
+        .pub-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-dark);
+            display: block;
+            margin-bottom: 6px;
+            line-height: 1.4;
+        }
+
+        .pub-authors {
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        .pub-venue {
+            display: inline-block;
+            font-style: italic;
+            color: var(--primary-color);
+            font-weight: 500;
+            background: #f1f5f9;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            text-align: center;
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+            margin-top: 80px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+            
+            .header-text h1 {
+                font-size: 2rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
+            .news-item {
+                flex-direction: column;
+                gap: 4px;
+            }
+
+            .news-date {
+                text-align: left;
+                font-size: 0.85rem;
+                color: var(--primary-color);
+            }
+        }
     </style>
 </head>
 <body>
 
 <header>
-    <img src="profile.png" alt="Yehonatan Elisha" class="profile-pic">
-    <div>
-        <h1>Yehonatan Elisha</h1>
-        <p class="subtitle">PhD Candidate in Tel Aviv University | AI Researcher</p>
-        <div class="social-links">
-            <a href="mailto:your-email@example.com" title="Email"><i class="fas fa-envelope"></i></a>
-            <a href="https://scholar.google.com/citations?user=gjZHHkAAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-            <a href="https://www.linkedin.com/in/yehonatan-elisha-a94067113/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-            <a href="https://github.com/yonisgit" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+    <div class="container header-content">
+        <img src="profile.png" alt="Yehonatan Elisha" class="profile-pic">
+        <div class="header-text">
+            <h1>Yehonatan Elisha</h1>
+            <p class="subtitle">AI Researcher | PhD Candidate at Tel Aviv University</p>
+            <div class="social-links">
+                <a href="mailto:yoniel@post.bgu.ac.il" title="Email"><i class="fas fa-envelope"></i></a>
+                <a href="https://scholar.google.com/citations?user=gjZHHkAAAAAJ" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+                <a href="https://www.linkedin.com/in/yehonatan-elisha-a94067113/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/yonisgit" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+            </div>
         </div>
     </div>
 </header>
 
 <nav>
-    <a href="#about">About</a>
-    <a href="#news">News</a>
-    <a href="#publications">Publications</a>
+    <div class="container">
+        <a href="#about">About</a>
+        <a href="#news">News</a>
+        <a href="#publications">Publications</a>
+    </div>
 </nav>
 
-<section id="about">
-    <h2>About Me</h2>
-    <p>
-        I am a PhD candidate at <strong>Tel Aviv University</strong>, advised by <strong>Oren Barkan</strong>. My research is at the intersection of 
-        <strong>Deep Learning</strong>, <strong>Computer Vision</strong>, and <strong>Explainable AI (XAI)</strong>. 
-        I focus on developing methods that make complex black-box models more interpretable and aligned with human cognition.
-    </p>
-    <p>
-        My work includes developing novel attribution methods like <em>Iterated Integrated Attributions</em> and <em>Stochastic Integrated Explanations</em>, 
-        which have been applied across vision models, recommender systems, and large language models (LLMs).
-    </p>
-     I am a PhD Candidate nearing the completion of my doctoral studies, advised by <strong>Oren Barkan</strong>. 
-        My research focuses on <strong>Continual Learning (CL)</strong> for computer vision and <strong>Explainable AI (XAI)</strong>. 
-        I am dedicated to making deep learning models more transparent and adaptive through methods such as saliency maps, 
-        Layer-wise Relevance Propagation (LRP), and concept-based interpretability.
-    </p>
-    <p>
-        Prior to my research career, I gained extensive industry experience as a <strong>Software Engineer</strong>, 
-        building large-scale Java REST APIs and big data applications. Currently, I am also the manager of a 
-        vibrant research community, bridging the gap between theoretical AI and practical implementation.
-    </p>
-    <div>
-        <span class="tag">Explainable AI</span>
-        <span class="tag">Computer Vision</span>
-        <span class="tag">Interpretable ML</span>
-        <span class="tag">Deep Learning</span>
-    </div>
-</section>
+<div class="container">
 
-<section id="news">
-    <h2>News</h2>
-    <!-- <div class="news-item">
-        <span class="news-date">Feb 2026</span> <span>Attended and presented three papers <strong>AAAI 2026</strong> in Singapore!</span>
-    </div> -->
-    <div class="news-item">
-        <span class="news-date">Nov 2025</span> <span>Our lab has three papers accepted to <strong>AAAI 2026</strong>!</span>
-    </div>
-    <div class="news-item">
-        <span class="news-date">Oct 2025</span> <span>Our paper “Soft Local Completeness: Rethinking Completeness in XAI” was presented as an Oral paper at <strong>ICCV 2025</strong>!</span>
-    </div>
-    <div class="news-item">
-        <span class="news-date">Aug 2025</span> <span>Our paper “Forget What You Know about LLMs Evaluations – LLMs Are Like a Chameleon” has been accepted to the main track at <strong>EMNLP 2025</strong>!</span>
-    </div>
-</section>
+    <section id="about">
+        <h2>About Me</h2>
+        <div class="about-text">
+            <p>
+                I am a PhD candidate nearing the completion of my studies at <strong>Tel Aviv University</strong>, advised by <strong>Oren Barkan</strong> and <strong>Noam Koenigstein</strong>. 
+                My research is centered on <strong>Interpretable and Explainable AI (XAI)</strong>, trying to make complex black-box models more transparent and adaptive.
+            </p>
+            <!-- <p>
+                Recently, I was honored as a member of the <strong>Forbes 30 Under 30</strong> class of 2025. 
+                My work includes developing novel attribution methods like <em>Iterated Integrated Attributions</em> and <em>Stochastic Integrated Explanations</em>, which have been applied across vision models, recommender systems, and Large Language Models (LLMs).
+            </p> -->
+            <p>
+                Prior to my academic career, I gained extensive experience as a <strong>Data Engineer</strong>, building large-scale data systems and services, focusing on data streaming, modeling, and ETL. 
+                Currently, I also manage a vibrant research community at my workplace, bridging the gap between theoretical AI and practical implementation.
+            </p>
+            <p>
+                I'm always happy to connect! Feel free to reach out if you'd like to explore potential collaborations.  
+            </p>
+        </div>
+        <div class="tags-container">
+            <span class="tag honor-badge"><i class="fas fa-star"></i> Forbes 30 Under 30 (2025)</span>
+            <span class="tag">Explainable AI</span>
+            <span class="tag">Computer Vision</span>
+            <span class="tag">Interpretable AI</span>
+            <span class="tag">Deep Learning</span>
+        </div>
+    </section>
 
-<section id="publications">
-    <h2>Publications</h2>
-    <div class="pub-list">
-        
-        <div class="pub-item">
-            <span class="pub-title">Rethinking Saliency Maps: A Cognitive Human Aligned Taxonomy and Evaluation Framework for Explanations</span>
-            <span class="pub-authors"><strong>Yehonatan Elisha</strong>, Seffi Cohen, Oren Barkan, Noam Koenigstein</span><br>
-            <span class="pub-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</span>
+    <section id="news">
+        <h2>News</h2>
+        <!-- <div class="news-item">
+            <span class="news-date">Feb 2026</span> 
+            <span class="news-content">Attended and presented three papers at <strong>AAAI 2026</strong> in Singapore!</span>
+        </div> -->
+        <div class="news-item">
+            <span class="news-date">Nov 2025</span> 
+            <span class="news-content">Three papers accepted to <strong>AAAI 2026</strong>.</span>
         </div>
+        <div class="news-item">
+            <span class="news-date">Oct 2025</span> 
+            <span class="news-content">Our paper “Soft Local Completeness: Rethinking Completeness in XAI” was presented as an Oral paper at <strong>ICCV 2025</strong>.</span>
+        </div>
+        <div class="news-item">
+            <span class="news-date">Aug 2025</span> 
+            <span class="news-content">Our paper “Forget What You Know about LLMs Evaluations” has been accepted to the main track at <strong>EMNLP 2025</strong>.</span>
+        </div>
+    </section>
 
-        <div class="pub-item">
-            <span class="pub-title">Extracting Interaction-Aware Monosemantic Concepts in Recommender Systems</span>
-            <span class="pub-authors">Dor Arviv, <strong>Yehonatan Elisha</strong>, Oren Barkan, Noam Koenigstein</span><br>
-            <span class="pub-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</span>
-        </div>
+    <section id="publications">
+        <h2>Selected Publications</h2>
+        <div class="pub-list">
+            
+            <div class="pub-item">
+                <span class="pub-title">Rethinking Saliency Maps: A Cognitive Human Aligned Taxonomy and Evaluation Framework for Explanations</span>
+                <span class="pub-authors"><strong>Yehonatan Elisha</strong>, Seffi Cohen, Oren Barkan, Noam Koenigstein</span>
+                <span class="pub-venue">AAAI 2026</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Fidelity-Aware Recommendation Explanations via Stochastic Path Integration</span>
-            <span class="pub-authors">Oren Barkan*, Yahlly Schein*, <strong>Yehonatan Elisha</strong>, Veronika Bogina, Mikhail Baklanov, Noam Koenigstein</span><br>
-            <span class="pub-venue">AAAI Conference on Artificial Intelligence (AAAI), 2026</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">Extracting Interaction-Aware Monosemantic Concepts in Recommender Systems</span>
+                <span class="pub-authors">Dor Arviv, <strong>Yehonatan Elisha</strong>, Oren Barkan, Noam Koenigstein</span>
+                <span class="pub-venue">AAAI 2026</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Soft Local Completeness: Rethinking Completeness in XAI</span>
-            <span class="pub-authors">Ziv Weiss Haddad*, Oren Barkan*, <strong>Yehonatan Elisha</strong>, Noam Koenigstein</span><br>
-            <span class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2025</span>
-        </div>
-        
-        <div class="pub-item">
-            <span class="pub-title">Forget What You Know about LLMs Evaluations-LLMs are Like a Chameleon</span>
-            <span class="pub-authors">Nurit Cohen Inger, <strong>Yehonatan Elisha</strong>, Bracha Shapira, Lior Rokach, Seffi Cohen</span><br>
-            <span class="pub-venue">Proceedings of the Conference on Empirical Methods in Natural Language Processing (EMNLP), 2025</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">Fidelity-Aware Recommendation Explanations via Stochastic Path Integration</span>
+                <span class="pub-authors">Oren Barkan*, Yahlly Schein*, <strong>Yehonatan Elisha</strong>, Veronika Bogina, Mikhail Baklanov, Noam Koenigstein</span>
+                <span class="pub-venue">AAAI 2026</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">BEE: Metric-Adapted Explanations via Baseline Exploration-Exploitation</span>
-            <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Noam Koenigstein</span><br>
-            <span class="pub-venue">AAAI Conference on Artificial Intelligence (AAAI), 2025</span>
-        </div>
-       
-        <div class="pub-item">
-            <span class="pub-title">Improving LLM Attributions with Randomized Path-Integration</span>
-            <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Yonatan Toib*, J Weill, N Koenigstein</span><br>
-            <span class="pub-venue">Findings of the Association for Computational Linguistics (EMNLP), 2024</span>
-        </div>
-        
-        <div class="pub-item">
-            <span class="pub-title">LLM Explainability via Attributive Masking Learning</span>
-            <span class="pub-authors">Oren Barkan*, Yonatan Toib*, <strong>Yehonatan Elisha*</strong>, J Weill, N Koenigstein</span><br>
-            <span class="pub-venue">Findings of the Association for Computational Linguistics (EMNLP), 2024</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">Soft Local Completeness: Rethinking Completeness in XAI</span>
+                <span class="pub-authors">Ziv Weiss Haddad*, Oren Barkan*, <strong>Yehonatan Elisha</strong>, Noam Koenigstein</span>
+                <span class="pub-venue">ICCV 2025 (Oral)</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-title">Forget What You Know about LLMs Evaluations-LLMs are Like a Chameleon</span>
+                <span class="pub-authors">Nurit Cohen Inger, <strong>Yehonatan Elisha</strong>, Bracha Shapira, Lior Rokach, Seffi Cohen</span>
+                <span class="pub-venue">EMNLP 2025</span>
+            </div>
 
-         <div class="pub-item">
-            <span class="pub-title">Probabilistic Path Integration with Mixture of Baseline Distributions</span>
-            <span class="pub-authors"><strong>Yehonatan Elisha</strong>, Oren Barkan, Noam Koenigstein</span><br>
-            <span class="pub-venue">ACM International Conference on Information and Knowledge Management (CIKM), 2024</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">BEE: Metric-Adapted Explanations via Baseline Exploration-Exploitation</span>
+                <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Noam Koenigstein</span>
+                <span class="pub-venue">AAAI 2025</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-title">Improving LLM Attributions with Randomized Path-Integration</span>
+                <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Yonatan Toib*, J Weill, N Koenigstein</span>
+                <span class="pub-venue">EMNLP Findings 2024</span>
+            </div>
+            
+            <div class="pub-item">
+                <span class="pub-title">LLM Explainability via Attributive Masking Learning</span>
+                <span class="pub-authors">Oren Barkan*, Yonatan Toib*, <strong>Yehonatan Elisha*</strong>, J Weill, N Koenigstein</span>
+                <span class="pub-venue">EMNLP Findings 2024</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">A Learning-based Approach for Explaining Language Models</span>
-            <span class="pub-authors">Oren Barkan*, Yonatan Toib*, <strong>Yehonatan Elisha*</strong>, N Koenigstein</span><br>
-            <span class="pub-venue">ACM International Conference on Information and Knowledge Management (CIKM), 2024</span>
-        </div>
+             <div class="pub-item">
+                <span class="pub-title">Probabilistic Path Integration with Mixture of Baseline Distributions</span>
+                <span class="pub-authors"><strong>Yehonatan Elisha</strong>, Oren Barkan, Noam Koenigstein</span>
+                <span class="pub-venue">CIKM 2024</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Visual Explanations via Iterated Integrated Attributions</span>
-            <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Yuval Asher, Amit Eshel, Noam Koenigstein</span><br>
-            <span class="pub-venue">IEEE/CVF International Conference on Computer Vision (ICCV), 2023</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">A Learning-based Approach for Explaining Language Models</span>
+                <span class="pub-authors">Oren Barkan*, Yonatan Toib*, <strong>Yehonatan Elisha*</strong>, N Koenigstein</span>
+                <span class="pub-venue">CIKM 2024</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Stochastic Integrated Explanations for Vision Models</span>
-            <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Yuval Asher, Amit Eshel, Noam Koenigstein</span><br>
-            <span class="pub-venue">IEEE International Conference on Data Mining (ICDM), 2023</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">Visual Explanations via Iterated Integrated Attributions</span>
+                <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Yuval Asher, Amit Eshel, Noam Koenigstein</span>
+                <span class="pub-venue">ICCV 2023</span>
+            </div>
 
-        <div class="pub-item">
-            <span class="pub-title">Deep Integrated Explanations</span>
-            <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Yuval Asher, Amit Eshel, Noam Koenigstein</span><br>
-            <span class="pub-venue">ACM International Conference on Information and Knowledge Management (CIKM), 2023</span>
-        </div>
+            <div class="pub-item">
+                <span class="pub-title">Stochastic Integrated Explanations for Vision Models</span>
+                <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Yuval Asher, Amit Eshel, Noam Koenigstein</span>
+                <span class="pub-venue">ICDM 2023</span>
+            </div>
 
-    </div>
-</section>
+            <div class="pub-item">
+                <span class="pub-title">Deep Integrated Explanations</span>
+                <span class="pub-authors">Oren Barkan*, <strong>Yehonatan Elisha*</strong>, Jonathan Weill, Yuval Asher, Amit Eshel, Noam Koenigstein</span>
+                <span class="pub-venue">CIKM 2023</span>
+            </div>
+
+        </div>
+    </section>
+
+</div>
 
 <footer>
     &copy; 2026 Yehonatan Elisha | Built with HTML & CSS
