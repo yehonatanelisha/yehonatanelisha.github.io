@@ -1,34 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<!-- saved from url=(0047)https://yehonatanelisha.github.io/#publications -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Yehonatan Elisha | AI Researcher & PhD Candidate at Tel Aviv University.">
+    <meta name="description" content="Yehonatan Elisha | AI Researcher &amp; PhD Candidate at Tel Aviv University.">
     <meta name="google-site-verification" content="FZXJLBufWLIs_Kvq7qGbsRwnFWhd9-ZqgqYAFlPdYnE">
     <title>Yehonatan Elisha | AI Researcher</title>
     
     <link rel="icon" type="image/png" href="https://yehonatanelisha.github.io/favicon.png">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+    <link rel="stylesheet" href="./Yehonatan Elisha _ AI Researcher - new_files/all.min.css">
+    <link rel="stylesheet" href="./Yehonatan Elisha _ AI Researcher - new_files/academicons.min.css">
     
     <style>
         :root {
-            /* Your vibrant accents */
-            --primary-color: #14b8a6; 
+            /* New Colorful Palette */
+            --primary-color: #14b8a6; /* Modern Teal */
             --primary-hover: #0d9488;
-            --accent-color: #f59e0b;  
+            --accent-color: #f59e0b;  /* Warm Amber/Gold */
             --text-dark: #0f172a;
             --text-medium: #334155;
             --text-light: #64748b;
-            
-            /* The Fused Background System */
-            --bg-body: #eef5fb; /* A very soft, icy light blue */
-            --bg-section: rgba(255, 255, 255, 0.55); /* Semi-transparent white to fuse with the blue */
-            --border-glass: rgba(255, 255, 255, 0.7);
-            
-            /* Soft shadows to define the boxes */
-            --card-shadow: 0 8px 32px -4px rgba(15, 23, 42, 0.04);
-            --card-hover-shadow: 0 12px 40px -4px rgba(15, 23, 42, 0.08);
+            --bg-light: #f8fafc;
+            --bg-white: #ffffff;
+            --border-color: #e2e8f0;
+            --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            --card-hover-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
         }
 
         * {
@@ -43,7 +39,7 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.8;
             color: var(--text-medium);
-            background-color: var(--bg-body); /* Sets the whole page to light blue */
+            background-color: var(--bg-light);
             margin: 0;
             padding: 0;
         }
@@ -56,9 +52,9 @@
 
         /* Header / Hero Section */
         header {
-            background: var(--bg-fused); /* Fuses with body */
+            background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
             padding: 80px 0 60px;
-            border-bottom: none; /* Removed line to fuse seamlessly */
+            border-bottom: 1px solid var(--border-color);
         }
 
         .header-content {
@@ -120,23 +116,22 @@
         nav {
             position: sticky;
             top: 0;
-            background: rgba(238, 245, 251, 0.85); /* Light blue but glassy */
-            backdrop-filter: blur(12px); 
-            -webkit-backdrop-filter: blur(12px);
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
             padding: 16px 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border-glass);
-            margin-bottom: 60px; /* Restored your bottom margin */
+            border-bottom: 1px solid var(--border-color);
+            margin-bottom: 60px;
+            box-shadow: 0 4px 20px -10px rgba(0,0,0,0.05); /* Adds a very soft drop shadow */
         }
 
         nav .container {
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
+            justify-content: center; /* Centers the buttons */
+            gap: 20px; 
+            flex-wrap: wrap; /* Keeps them neat on smaller screens */
         }
 
-        /* The Tab Buttons */
         nav a {
             text-decoration: none;
             color: var(--text-medium);
@@ -144,12 +139,12 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 10px 24px;
+            padding: 10px 24px; /* Creates the pill shape */
             border-radius: 30px; 
-            background: var(--bg-section); /* Fuses with the background */
-            border: 1px solid var(--border-glass);
-            box-shadow: 0 2px 4px -1px rgba(0,0,0,0.02);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background-color: var(--bg-white);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 4px -1px rgba(0,0,0,0.05);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth hover animation */
         }
 
         /* Multi-colored Hover Effects */
@@ -181,17 +176,15 @@
             box-shadow: 0 6px 12px -2px rgba(99, 102, 241, 0.3);
         }
 
-       /* General Section Styling (Structure Restored!) */
+        /* General Section Styling */
         section {
-            margin-bottom: 80px; /* Restored bottom margin */
+            margin-bottom: 80px;
             scroll-margin-top: 100px;
-            background: var(--bg-section); /* Glassy white that turns light blue */
-            backdrop-filter: blur(10px); /* Creates the frosted glass effect */
-            -webkit-backdrop-filter: blur(10px);
-            padding: 40px; /* Restored your nice padding */
-            border-radius: 16px; /* Restored rounded corners */
+            background: var(--bg-white);
+            padding: 40px;
+            border-radius: 16px;
             box-shadow: var(--card-shadow);
-            border: 1px solid var(--border-glass); /* Very subtle border to define the shape */
+            border: 1px solid var(--border-color);
         }
 
         h2 {
@@ -314,20 +307,18 @@
             gap: 20px;
         }
 
-        /* Publication Cards */
         .pub-item {
             padding: 24px;
-            background: rgba(255, 255, 255, 0.7); /* Slightly more opaque white for contrast */
-            border: 1px solid var(--border-glass);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.02);
-            transition: all 0.3s ease;
+            background: var(--bg-white);
+            transition: all 0.2s ease;
         }
 
         .pub-item:hover {
             box-shadow: var(--card-hover-shadow);
-            transform: translateY(-3px);
-            background: #ffffff; /* Turns solid white when hovered to pop out */
+            border-color: #cbd5e1;
+            transform: translateY(-2px);
         }
 
         .pub-title {
@@ -420,7 +411,7 @@
 
 <header>
     <div class="container header-content">
-        <img src="./profile.png" alt="Yehonatan Elisha" class="profile-pic">
+        <img src="./Yehonatan Elisha _ AI Researcher - new_files/profile.png" alt="Yehonatan Elisha" class="profile-pic">
         <div class="header-text">
             <h1>Yehonatan Elisha</h1>
             <p class="subtitle">AI Researcher | PhD Candidate at Tel Aviv University</p>
@@ -437,9 +428,9 @@
 
 <nav>
     <div class="container">
-        <a href="#about">About</a>
-        <a href="#news">News</a>
-        <a href="#publications">Publications</a>
+        <a href="https://yehonatanelisha.github.io/#about">About</a>
+        <a href="https://yehonatanelisha.github.io/#news">News</a>
+        <a href="https://yehonatanelisha.github.io/#publications">Publications</a>
     </div>
 </nav>
 
@@ -600,5 +591,6 @@
 
 </div>
 
-</body>
-</html>
+
+
+</body></html>
