@@ -13,26 +13,23 @@
     
     <style>
         :root {
-            /* New Colorful Palette */
             --primary-color: #14b8a6; 
             --primary-hover: #0d9488;
             --accent-color: #f59e0b;  
             --text-dark: #0f172a;
             --text-medium: #334155;
             --text-light: #64748b;
-            --bg-light: #f8fafc;
-            --bg-white: #ffffff;
-            --border-color: #e2e8f0;
-            /* New Light & Colorful Background System */
-            /* A very soft blend of icy blue, light lavender, and mint */
-            --bg-gradient: linear-gradient(135deg, #f0f7ff 0%, #fdf4ff 50%, #f0fdfa 100%);
-            /* Semi-transparent white for the "glass" effect */
-            --bg-glass: rgba(255, 255, 255, 0.65); 
-            --border-glass: rgba(255, 255, 255, 0.8);
             
-            /* Softer, more diffuse shadows to match the light theme */
-            --card-shadow: 0 8px 32px -4px rgba(31, 38, 135, 0.05);
-            --card-hover-shadow: 0 12px 40px -4px rgba(31, 38, 135, 0.1);
+            /* The new ultra-light blue background */
+            --bg-body: #f2f7fb; 
+            
+            /* Fused elements (transparent) and floating elements (soft white) */
+            --bg-fused: transparent;
+            --bg-floating: rgba(255, 255, 255, 0.6); 
+            
+            /* Ultra-soft shadows, replacing harsh borders */
+            --shadow-soft: 0 4px 20px rgba(15, 23, 42, 0.03);
+            --shadow-hover: 0 8px 30px rgba(15, 23, 42, 0.08);
         }
 
 
@@ -48,8 +45,7 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.8;
             color: var(--text-medium);
-            background: var(--bg-gradient);
-            background-attachment: fixed; /* Keeps the gradient stable while scrolling */
+            background-color: var(--bg-body); /* Solid very light blue */
             margin: 0;
             padding: 0;
         }
@@ -62,9 +58,9 @@
 
         /* Header / Hero Section */
         header {
-            background: transparent; /* Let the body gradient show through */
+            background: var(--bg-fused); /* Fuses with body */
             padding: 80px 0 60px;
-            /* Removed the solid border for a cleaner look */
+            border-bottom: none; /* Removed line to fuse seamlessly */
         }
 
         .header-content {
@@ -126,22 +122,24 @@
         nav {
             position: sticky;
             top: 0;
-            background: rgba(255, 255, 255, 0.85);
-            backdrop-filter: blur(12px);
+            background: rgba(242, 247, 251, 0.85); /* Matches background but slightly transparent */
+            backdrop-filter: blur(12px); /* Blurs content underneath when scrolling */
+            -webkit-backdrop-filter: blur(12px);
             padding: 16px 0;
             z-index: 100;
-            border-bottom: 1px solid var(--border-color);
-            margin-bottom: 60px;
-            box-shadow: 0 4px 20px -10px rgba(0,0,0,0.05); /* Adds a very soft drop shadow */
+            border-bottom: none;
+            box-shadow: none; /* Removed shadow to fuse with page */
+            margin-bottom: 40px;
         }
 
         nav .container {
             display: flex;
-            justify-content: center; /* Centers the buttons */
-            gap: 20px; 
-            flex-wrap: wrap; /* Keeps them neat on smaller screens */
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
         }
 
+        /* The Tab Buttons */
         nav a {
             text-decoration: none;
             color: var(--text-medium);
@@ -149,14 +147,12 @@
             font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            padding: 10px 24px; /* Creates the pill shape */
+            padding: 10px 24px;
             border-radius: 30px; 
-            background-color: var(--bg-glass);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            border: 1px solid var(--border-glass);
-            box-shadow: var(--card-shadow);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Smooth hover animation */
+            background-color: var(--bg-floating); /* Soft white floating on the blue */
+            border: none; /* No borders */
+            box-shadow: var(--shadow-soft);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         /* Multi-colored Hover Effects */
@@ -192,13 +188,11 @@
         section {
             margin-bottom: 80px;
             scroll-margin-top: 100px;
-            background: var(--bg-glass);
-            backdrop-filter: blur(16px); /* Blurs the colorful background behind the card */
-            -webkit-backdrop-filter: blur(16px);
-            padding: 40px;
-            border-radius: 16px;
-            box-shadow: var(--card-shadow);
-            border: 1px solid var(--border-glass);
+            background: var(--bg-fused); /* Completely fuses with the background */
+            padding: 40px 0; /* Removed side padding since there is no box anymore */
+            border-radius: 0;
+            box-shadow: none;
+            border: none;
         }
 
         h2 {
@@ -323,18 +317,17 @@
 
         .pub-item {
             padding: 24px;
-            background: var(--bg-glass);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            border: 1px solid var(--border-glass);
-            border-radius: 12px;
+            background: var(--bg-floating); /* Soft white cards against the blue */
+            border: none; /* Removed harsh borders */
+            border-radius: 16px;
+            box-shadow: var(--shadow-soft);
             transition: all 0.3s ease;
         }
 
         .pub-item:hover {
-            box-shadow: var(--card-hover-shadow);
-            border-color: #cbd5e1;
-            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-3px);
+            background: #ffffff; /* Turns solid white when hovered */
         }
 
         .pub-title {
