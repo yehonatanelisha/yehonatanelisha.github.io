@@ -13,6 +13,7 @@
     
     <style>
         :root {
+            /* Your vibrant accents */
             --primary-color: #14b8a6; 
             --primary-hover: #0d9488;
             --accent-color: #f59e0b;  
@@ -20,18 +21,15 @@
             --text-medium: #334155;
             --text-light: #64748b;
             
-            /* The new ultra-light blue background */
-            --bg-body: #f2f7fb; 
+            /* The Fused Background System */
+            --bg-body: #eef5fb; /* A very soft, icy light blue */
+            --bg-section: rgba(255, 255, 255, 0.55); /* Semi-transparent white to fuse with the blue */
+            --border-glass: rgba(255, 255, 255, 0.7);
             
-            /* Fused elements (transparent) and floating elements (soft white) */
-            --bg-fused: transparent;
-            --bg-floating: rgba(255, 255, 255, 0.6); 
-            
-            /* Ultra-soft shadows, replacing harsh borders */
-            --shadow-soft: 0 4px 20px rgba(15, 23, 42, 0.03);
-            --shadow-hover: 0 8px 30px rgba(15, 23, 42, 0.08);
+            /* Soft shadows to define the boxes */
+            --card-shadow: 0 8px 32px -4px rgba(15, 23, 42, 0.04);
+            --card-hover-shadow: 0 12px 40px -4px rgba(15, 23, 42, 0.08);
         }
-
 
         * {
             box-sizing: border-box;
@@ -45,7 +43,7 @@
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             line-height: 1.8;
             color: var(--text-medium);
-            background-color: var(--bg-body); /* Solid very light blue */
+            background-color: var(--bg-body); /* Sets the whole page to light blue */
             margin: 0;
             padding: 0;
         }
@@ -122,14 +120,13 @@
         nav {
             position: sticky;
             top: 0;
-            background: rgba(242, 247, 251, 0.85); /* Matches background but slightly transparent */
-            backdrop-filter: blur(12px); /* Blurs content underneath when scrolling */
+            background: rgba(238, 245, 251, 0.85); /* Light blue but glassy */
+            backdrop-filter: blur(12px); 
             -webkit-backdrop-filter: blur(12px);
             padding: 16px 0;
             z-index: 100;
-            border-bottom: none;
-            box-shadow: none; /* Removed shadow to fuse with page */
-            margin-bottom: 40px;
+            border-bottom: 1px solid var(--border-glass);
+            margin-bottom: 60px; /* Restored your bottom margin */
         }
 
         nav .container {
@@ -149,9 +146,9 @@
             letter-spacing: 0.05em;
             padding: 10px 24px;
             border-radius: 30px; 
-            background-color: var(--bg-floating); /* Soft white floating on the blue */
-            border: none; /* No borders */
-            box-shadow: var(--shadow-soft);
+            background: var(--bg-section); /* Fuses with the background */
+            border: 1px solid var(--border-glass);
+            box-shadow: 0 2px 4px -1px rgba(0,0,0,0.02);
             transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
@@ -184,15 +181,17 @@
             box-shadow: 0 6px 12px -2px rgba(99, 102, 241, 0.3);
         }
 
-        /* General Section Styling */
+       /* General Section Styling (Structure Restored!) */
         section {
-            margin-bottom: 80px;
+            margin-bottom: 80px; /* Restored bottom margin */
             scroll-margin-top: 100px;
-            background: var(--bg-fused); /* Completely fuses with the background */
-            padding: 40px 0; /* Removed side padding since there is no box anymore */
-            border-radius: 0;
-            box-shadow: none;
-            border: none;
+            background: var(--bg-section); /* Glassy white that turns light blue */
+            backdrop-filter: blur(10px); /* Creates the frosted glass effect */
+            -webkit-backdrop-filter: blur(10px);
+            padding: 40px; /* Restored your nice padding */
+            border-radius: 16px; /* Restored rounded corners */
+            box-shadow: var(--card-shadow);
+            border: 1px solid var(--border-glass); /* Very subtle border to define the shape */
         }
 
         h2 {
@@ -315,19 +314,20 @@
             gap: 20px;
         }
 
+        /* Publication Cards */
         .pub-item {
             padding: 24px;
-            background: var(--bg-floating); /* Soft white cards against the blue */
-            border: none; /* Removed harsh borders */
-            border-radius: 16px;
-            box-shadow: var(--shadow-soft);
+            background: rgba(255, 255, 255, 0.7); /* Slightly more opaque white for contrast */
+            border: 1px solid var(--border-glass);
+            border-radius: 12px;
+            box-shadow: 0 2px 10px -2px rgba(15, 23, 42, 0.02);
             transition: all 0.3s ease;
         }
 
         .pub-item:hover {
-            box-shadow: var(--shadow-hover);
+            box-shadow: var(--card-hover-shadow);
             transform: translateY(-3px);
-            background: #ffffff; /* Turns solid white when hovered */
+            background: #ffffff; /* Turns solid white when hovered to pop out */
         }
 
         .pub-title {
